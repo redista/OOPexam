@@ -14,7 +14,7 @@ namespace OOPexam
         public decimal Balance { get; set; }
         public DateTime InterestDate { get; set; }
 
-        public abstract decimal CalculateInterest();
+        public abstract bool CalculateInterest();
 
         public override string ToString()
         {
@@ -26,9 +26,15 @@ namespace OOPexam
     {
         public decimal InterestRate = 0.03m;
 
-        public override decimal CalculateInterest()
+        public override bool CalculateInterest()
         {
-            return Balance * InterestRate;
+            if (InterestDate < DateTime.Now.AddYears(-1))
+            {
+                InterestDate = DateTime.Now;
+                Balance = Balance + (Balance * InterestRate);
+                return true;
+            }
+            return false;
         }
     }
     
@@ -36,9 +42,15 @@ namespace OOPexam
     {
         public decimal InterestRate = 0.06m;
 
-        public override decimal CalculateInterest()
+        public override bool CalculateInterest()
         {
-            return Balance * InterestRate;
+            if (InterestDate < DateTime.Now.AddYears(-1))
+            {
+                InterestDate = DateTime.Now;
+                Balance = Balance + (Balance * InterestRate);
+                return true;
+            }
+            return false;
         }
     }
 }

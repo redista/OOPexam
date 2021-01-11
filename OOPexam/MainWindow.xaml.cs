@@ -30,8 +30,8 @@ namespace OOPexam
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Account Acc1 = new CurrentAccount() {AccNo = 1, FirstName = "John", LastName = "Doe", Balance = 10000, InterestDate = DateTime.Now};
-            Account Acc2 = new SavingsAccount() {AccNo = 2, FirstName = "Jane", LastName = "Lyon", Balance = 20000};
+            Account Acc1 = new CurrentAccount() {AccNo = 1, FirstName = "John", LastName = "Doe", Balance = 10000, InterestDate = new DateTime(2019,05,10)};
+            Account Acc2 = new SavingsAccount() {AccNo = 2, FirstName = "Jane", LastName = "Lyon", Balance = 20000, InterestDate = new DateTime(2010,10,20)};
 
             Accounts.Add(Acc1);
             Accounts.Add(Acc2);
@@ -78,15 +78,14 @@ namespace OOPexam
 
         private void LbxAccounts_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Sets the employee selected to geneiric employee class
             Account SelectedAccount = LbxAccounts.SelectedItem as Account;
 
             // If it is null, don't do anything
             if (SelectedAccount != null)
             {
                 FNtb.Text = SelectedAccount.FirstName;
-                LNtb.Text = SelectedAccount.FirstName;
-                Balancetb.Text = SelectedAccount.FirstName;
+                LNtb.Text = SelectedAccount.LastName;
+                Balancetb.Text = SelectedAccount.Balance.ToString();
                 InterestDatetb.Text = SelectedAccount.InterestDate.ToString();
                 AccountTypetb.Text = SelectedAccount is CurrentAccount ? "Current" : "Savings";
             }
@@ -100,6 +99,62 @@ namespace OOPexam
             Balancetb.Text = "";
             AccountTypetb.Text = "";
             InterestDatetb.Text = "";
+        }
+
+        private void DepositBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Account SelectedAccount = LbxAccounts.SelectedItem as Account;
+
+            decimal TransactionAmount = 0;
+
+            if (SelectedAccount != null)
+            {
+                if (decimal.TryParse(Transactiontbx.Text, out TransactionAmount))
+                {
+                    SelectedAccount.Balance += TransactionAmount;
+
+                    Balancetb.Text = SelectedAccount.Balance.ToString();
+                    Transactiontbx.Text = "";
+                }
+            }
+        }
+
+        private void WithdrawBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Account SelectedAccount = LbxAccounts.SelectedItem as Account;
+
+            decimal TransactionAmount = 0;
+
+            if (SelectedAccount != null)
+            {
+                if (decimal.TryParse(Transactiontbx.Text, out TransactionAmount))
+                {
+                    SelectedAccount.Balance -= TransactionAmount;
+
+                    Balancetb.Text = SelectedAccount.Balance.ToString();
+                    Transactiontbx.Text = "";
+                }
+            }
+        }
+
+        private void InterestBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+            Account SelectedAccount = LbxAccounts.SelectedItem as Account;
+
+            if (SelectedAccount != null)
+            {
+                if (!SelectedAccount.CalculateInterest())
+                {
+                    MessageBox.Show("Interest has already been applied within the past year");
+                }
+                else
+                {
+                    Balancetb.Text = SelectedAccount.Balance.ToString();
+                    InterestDatetb.Text = SelectedAccount.InterestDate.ToString();
+                }
+            }
         }
     }
 }
