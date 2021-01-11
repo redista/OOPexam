@@ -1,0 +1,5 @@
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.csprojAssemblyReference.cache
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\MainWindow.g.cs
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\App.g.cs
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam_MarkupCompile.cache
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam_MarkupCompile.lref
