@@ -3,3 +3,13 @@ C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\MainWindo
 C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\App.g.cs
 C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam_MarkupCompile.cache
 C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam_MarkupCompile.lref
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\bin\Debug\OOPexam.exe.config
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\bin\Debug\OOPexam.exe
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\bin\Debug\OOPexam.pdb
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\MainWindow.baml
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.g.resources
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.Properties.Resources.resources
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.csproj.GenerateResource.cache
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.csproj.CoreCompileInputs.cache
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.exe
+C:\Users\vkqwn\Documents\college\y2\oop\exam\OOPexam\OOPexam\obj\Debug\OOPexam.pdb

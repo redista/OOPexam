@@ -5,31 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOPexam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
-    <Grid>
+        Title="MainWindow" Height="492.4" Width="800" Loaded="Window_Loaded">
+    <Grid Margin="0,0,-0.4,54.8">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="30*"/>
-            <ColumnDefinition Width="737*"/>
+            <ColumnDefinition Width="166*"/>
+            <ColumnDefinition Width="571*"/>
         </Grid.ColumnDefinitions>
         <CheckBox x:Name="CAcheck" Content="Current Accounts" HorizontalAlignment="Left" Margin="21.2,54,0,0" VerticalAlignment="Top" Checked="Tcheck_Checked" Unchecked="Tcheck_Checked" Grid.Column="3"/>
-        <CheckBox x:Name="SAcheck" Content="Savings Accounts" HorizontalAlignment="Left" Margin="158.2,54,0,0" VerticalAlignment="Top" Checked="Tcheck_Checked" Unchecked="Tcheck_Checked" Grid.Column="3"/>
-        <ListBox x:Name="LbxAccounts" HorizontalAlignment="Left" Height="258" VerticalAlignment="Top" Width="183" Margin="21.2,99,0,0" SelectionChanged="LbxAccounts_SelectionChanged" Grid.Column="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="265.2,104,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="264.2,171,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="265.2,276,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="265.2,380,0,0" TextWrapping="Wrap" Text="Interest Date" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="264.2,334,0,0" TextWrapping="Wrap" Text="Account Type" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBlock HorizontalAlignment="Left" Margin="265.2,441,0,-37" TextWrapping="Wrap" Text="Transaction Amount:" VerticalAlignment="Top" Grid.Column="3"/>
-        <TextBox Grid.Column="3" HorizontalAlignment="Left" Height="23" Margin="400.2,434,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="385.2,114,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="385.2,173,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="381.2,281,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="384.2,342,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="393.2,382,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <Button Content="Deposit" Grid.Column="3" HorizontalAlignment="Left" Margin="591.2,69,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Withdraw" Grid.Column="3" HorizontalAlignment="Left" Margin="591.2,130,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Interest" Grid.Column="3" HorizontalAlignment="Left" Margin="591.2,194,0,0" VerticalAlignment="Top" Width="75"/>
+        <CheckBox x:Name="SAcheck" Content="Savings Accounts" HorizontalAlignment="Left" Margin="158.2,54,0,0" VerticalAlignment="Top" Checked="Tcheck_Checked" Unchecked="Tcheck_Checked" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="LbxAccounts" HorizontalAlignment="Left" Height="258" VerticalAlignment="Top" Width="183" Margin="21.2,99,0,0" SelectionChanged="LbxAccounts_SelectionChanged" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="99.333,104,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="98.8,151,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="98.8,226,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="97.8,326,0,0" TextWrapping="Wrap" Text="Interest Date" VerticalAlignment="Top" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="98.8,275,0,0" TextWrapping="Wrap" Text="Account Type" VerticalAlignment="Top" Grid.Column="4"/>
+        <TextBlock HorizontalAlignment="Left" Margin="97.8,392,0,0" TextWrapping="Wrap" Text="Transaction Amount:" VerticalAlignment="Top" Grid.Column="4"/>
+        <TextBox Grid.Column="4" HorizontalAlignment="Left" Height="23" Margin="234.8,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="FNtb" Grid.Column="4" HorizontalAlignment="Left" Margin="194.8,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="LNtb" Grid.Column="4" HorizontalAlignment="Left" Margin="194.8,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Balancetb" Grid.Column="4" HorizontalAlignment="Left" Margin="194.8,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.004,-1.012"/>
+        <TextBlock x:Name="AccountTypetb" Grid.Column="4" HorizontalAlignment="Left" Margin="194.8,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock x:Name="InterestDatetb" Grid.Column="4" HorizontalAlignment="Left" Margin="194.8,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Deposit" Grid.Column="4" HorizontalAlignment="Left" Margin="425.333,69,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Withdraw" Grid.Column="4" HorizontalAlignment="Left" Margin="425.333,130,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Interest" Grid.Column="4" HorizontalAlignment="Left" Margin="425.333,194,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
